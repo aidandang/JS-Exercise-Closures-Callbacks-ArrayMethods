@@ -313,7 +313,7 @@ function counterMaker() {
 function counterMakerWithLimit(limitNum) {
   let count = 0;
   return function() {
-    if (count <= limitNum) { return count++ } else { count = 0; return count++ }
+    if (count > limitNum) {count = 0}; return count++
   }
 }
 
